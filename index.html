@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签选择实战---确定标签</title>
+    <style>
+        .fx table,.fx tr,.fx td{border: 1px solid #333;}
+        .fx {border-collapse: collapse;}
+    </style>
+</head>
+<body>
+    <!-- 确定标签 方案1，使用ul无序列表-->
+    <ul>
+        <li>
+            <div><img src="" alt=""></div>
+            <div>
+                <h2>文章大标题</h2>
+                <div><span>2016-08-15</span><span>文章类别：JavaScript</span></div>
+                <p>文章描述信息</p>
+            </div>
+        </li>
+    </ul></br>
+
+    <!-- 确定标签  方案2，使用dl自定义列表-->
+    <dl>
+        <dt><img src="" alt="" title=""></dt>
+        <dd>
+            <h2>文章大标题</h2>
+            <div><span>2016-08-15</span><span>文章类别：JavaScript</span></div>
+            <p>文章描述信息</p>
+        </dd>
+    </dl></br>
+
+
+    <!-- 确定标签  方案3，使用内部结构不同的dl自定义列表-->
+    <dl>
+        <dt><img src="" alt=""></dt>
+        <dd>
+            <h2>文章大标题</h2>
+            <h3><span>2016-08-15</span><span>文章类别：JavaScript</span></h3>
+            <p>文章描述信息</p>
+        </dd>
+    </dl></br>
+
+    <!-- 确定标签  方案4，大量应用div-->
+    <div>
+        <div><img src="" alt=""></div>
+        <div>
+            <div>文章大标题</div>
+            <div><span>2016-08-15</span><span>文章类别：JavaScript</span></div>
+            <div>文章描述信息</div>
+        </div>
+    </div></br>
+
+
+    <!-- 确定标签  方案5，使用table表格 -->
+    <table>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>
+                <h2>文章大标题</h2>
+                <div><span>2016-08-15</span><span>文章类别：JavaScript</span></div>
+                <p>文章描述信息</p>
+            </td>
+        </tr>
+    </table></br>
+
+    <!-- 实现方案的对比分析 -->
+    <table class="fx">
+        <tr>
+            <td>方案</td>
+            <td>具体方案</td>
+            <td>嵌套情况</td>
+            <td>标签语义</td>
+            <td>评价</td>
+            <td>备注</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ul无序列表</td>
+            <td>合理嵌套</td>
+            <td>合理</td>
+            <td>较好</td>
+            <td>ol和ul类似</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>dl自定义列表</td>
+            <td>合理嵌套</td>
+            <td>合理</td>
+            <td>较好</td>
+            <td>使用div标签包含发布时间和文章分类</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>内部结构不同的dl自定义列表</td>
+            <td>合理嵌套</td>
+            <td>在h3部分有误</td>
+            <td>一般</td>
+            <td>使用h3标签包含发布时间和文章分类</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>大量应用div</td>
+            <td>合理嵌套</td>
+            <td>没有语义</td>
+            <td>差</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>table表格</td>
+            <td>层数太多</td>
+            <td>语义性偏差</td>
+            <td>差</td>
+            <td>table标签的语义性为表格</td>
+        </tr>
+    </table></br>
+</body>
+</html>
